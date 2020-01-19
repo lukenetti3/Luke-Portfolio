@@ -1,0 +1,33 @@
+.hero {
+    background-color: rgba(193, 148, 92, 0.14);
+    padding: 9rem 25rem 9rem 4rem;
+}
+
+.text-pad {
+    padding: 20px 0;
+}
+
+.flex-grid {
+   display: flex;
+}
+
+.col {
+    flex: 1;
+}
+
+#Projects {
+    padding: 10rem 4rem;
+}
+
+@media (max-width: 1200px) {
+    .hero {
+        padding: 9rem 4rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .flex-grid {
+        display: block;
+        justify-content: center;
+      }
+  }
