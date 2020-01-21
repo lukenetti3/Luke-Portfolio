@@ -19,9 +19,43 @@
     padding: 10rem 4rem;
 }
 
+#About {
+    padding: 10rem 4rem 5rem  4rem;
+    background-color: #c1605c;
+    h1, h3, p {
+        color: white;
+    }
+    div {
+        padding-top: 5rem;
+    }
+}
+
+#About-me {
+    padding: 10rem 4rem 5rem 4rem;
+
+}
+
+#Contact {
+    padding: 10rem 4rem 15rem 4rem;
+    background-color: #7aada4;
+    h1, p {
+        color: white;
+    }
+    div {
+        padding-top: 5rem;
+    }
+}
+
+.img-pad {
+    padding: 0 4rem 4rem 4rem,
+}
+
 @media (max-width: 1200px) {
     .hero {
         padding: 9rem 4rem;
+    }
+    #scroll {
+        display: none;
     }
   }
 
@@ -30,4 +64,7 @@
         display: block;
         justify-content: center;
       }
+    .img-pad {
+        padding-left: 0;
+    }
   }
