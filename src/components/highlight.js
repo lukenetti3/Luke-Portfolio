@@ -3,18 +3,17 @@ import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 
-const green = css({
-    background: 'linear-gradient(180deg,rgba(255,255,255,0) 55%, #7aada4 50%)'
-})
+const Highlight = (props) => (
+  <span style={{background: `linear-gradient(180deg,rgba(255,255,255,0) 55%, ${props.color} 50%)`}}>
+      {props.children}
+  </span>
+)
 
-const white = css({
-    background: 'linear-gradient(180deg,rgba(255,255,255,0) 55%, #ffffff 50%)'
-})
+const Welcome = (props) => (
+  <div>
+    <h1>{props.name}</h1>
+    <p>{props.children}</p>
+  </div>
+)
 
-const Highlight = ({children}, props) => (
-    <span css={green}>
-        {children}
-    </span>
-  )
-  
-  export default Highlight
+export default Highlight

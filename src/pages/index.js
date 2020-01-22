@@ -4,11 +4,12 @@ import homeStyles from "../components/home.module.scss"
 import PrimaryButton from "../components/PrimaryButton"
 import Highlight from "../components/highlight"
 import { Link } from "gatsby"
-import { css } from "@emotion/core"
+import { css, jsx } from "@emotion/core"
 import projectImg from "../images/projectImg.jpg"
 import codeImg from "../images/code.jpg"
 import lukeImg from "../images/luke.jpg"
 import Fade from "react-reveal/Fade"
+import Zoom from "react-reveal/Zoom"
 
 const scrollLine = css({
   textTransform: "uppercase",
@@ -31,13 +32,13 @@ const categoryTxt = css({
   letterSpacing: "2px",
 })
 
-const imgShadow = css({
-  boxShadow: "12px 12px solid grey",
-})
-
 const specialP = css({
   fontSize: "2rem",
   textWeight: "bolder",
+})
+
+const boxShadow = css({
+    boxShadow: '2px 2px px 2px rgba(0,0,0,0.3)'
 })
 
 const IndexPage = () => (
@@ -46,8 +47,9 @@ const IndexPage = () => (
       <section className={homeStyles.hero}>
         <Fade bottom>
           <h1>
-            Hi, Luke Netti, <Highlight>Web Developer</Highlight> and{" "}
-            <Highlight color='green'>Engineer</Highlight>
+            Hi, Luke Netti, <Highlight color="#7aada4">Web Developer</Highlight>{" "}
+            and
+            <Highlight color="#7aada4"> Engineer</Highlight>
           </h1>
           <p className={homeStyles.textPad}>
             I am awesome. Hire me. I love my wife and Melly. If you hire me, you
@@ -146,7 +148,7 @@ const IndexPage = () => (
         <div className={homeStyles.col}>
           <Fade>
             <h1>
-              What I <Highlight>Do</Highlight>
+              What I <Highlight color="#c2988b">Do</Highlight>
             </h1>
           </Fade>
         </div>
@@ -171,16 +173,18 @@ const IndexPage = () => (
       <section id={homeStyles.AboutMe}>
         <div className={homeStyles.flexGrid}>
           <div className={homeStyles.col}>
-            <img src={lukeImg} css={leftImg} />
+            <img src={lukeImg} css={leftImg} alt="" />
           </div>
           <div className={homeStyles.col}>
-            <p css={specialP}>About Me</p>
-            <p>
-              Hello there, I’m Luke, an Engineer with a passion for web
-              development and creating webspace for creatives. Thanks to my
-              wife, I recently found out I am an Enneagram 6. I am a hobby man
-              with a passion for making music, reading, and sports.
-            </p>
+            <Zoom>
+              <p css={specialP}>About Me</p>
+              <p>
+                Hello there, I’m Luke, an Engineer with a passion for web
+                development and creating webspace for creatives. Thanks to my
+                wife, I recently found out I am an Enneagram 6. I am a hobby man
+                with a passion for making music, reading, and sports.
+              </p>
+            </Zoom>
           </div>
         </div>
       </section>

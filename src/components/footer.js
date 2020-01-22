@@ -17,7 +17,7 @@ const Footer = () => (
       style={{ paddingTop: "0" }}
     >
       <div className={homeStyles.col}>
-        <h1>Want to Work?</h1>
+        <h1>Want to <Highlight color='black'>Work?</Highlight></h1>
       </div>
       <div className={homeStyles.col}>
         <p>
