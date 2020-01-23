@@ -47,7 +47,10 @@
 }
 
 .img-pad {
-    padding: 0 4rem 4rem 4rem,
+    // padding: 0 4rem 4rem 4rem;
+    &:hover {
+        box-shadow: 5px 5px 5px 5px #cfcfcf;
+    }
 }
 
 @media (max-width: 1200px) {

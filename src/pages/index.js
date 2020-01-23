@@ -10,6 +10,7 @@ import codeImg from "../images/code.jpg"
 import lukeImg from "../images/luke.jpg"
 import Fade from "react-reveal/Fade"
 import Zoom from "react-reveal/Zoom"
+import styled from "@emotion/styled"
 
 const scrollLine = css({
   textTransform: "uppercase",
@@ -38,8 +39,13 @@ const specialP = css({
 })
 
 const boxShadow = css({
-    boxShadow: '2px 2px px 2px rgba(0,0,0,0.3)'
+  boxShadow: "2px 2px px 2px rgba(0,0,0,0.3)",
 })
+
+const StyledLink = styled(Link)`
+  color: white;
+  text-decoration: none;
+`
 
 const IndexPage = () => (
   <div>
@@ -63,7 +69,7 @@ const IndexPage = () => (
       </section>
 
       <section className={homeStyles.flexGrid} id={homeStyles.Projects}>
-        <div className={homeStyles.col}>
+        <div className={homeStyles.col} style={{ marginRight: "7rem" }}>
           <p css={categoryTxt}>Work</p>
           <h1>Projects</h1>
           <span
@@ -88,7 +94,9 @@ const IndexPage = () => (
             application. I designed the page first then built a responsive web
             page using Webflow.
           </p>
-          <PrimaryButton>see projects</PrimaryButton>
+          <PrimaryButton>
+            <StyledLink to="/projects">see projects</StyledLink>
+          </PrimaryButton>
         </div>
         <div className={homeStyles.col}>
           <Fade right>
@@ -102,7 +110,7 @@ const IndexPage = () => (
         id={homeStyles.Projects}
         style={{ paddingTop: "0" }}
       >
-        <div className={homeStyles.col}>
+        <div className={homeStyles.col} style={{ marginRight: "7rem" }}>
           <p css={categoryTxt}>Skillset</p>
           <h1>Web Development</h1>
           <span
@@ -131,7 +139,9 @@ const IndexPage = () => (
             application. I designed the page first then built a responsive web
             page using Webflow.
           </p>
-          <PrimaryButton>see projects</PrimaryButton>
+          <PrimaryButton>
+            <StyledLink to="/projects">see projects</StyledLink>
+          </PrimaryButton>
         </div>
         <div className={homeStyles.col}>
           <Fade right>
