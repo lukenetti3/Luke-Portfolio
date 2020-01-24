@@ -18,16 +18,21 @@ const Button = styled.button`
   height: 63px;
   width: 200px;
   font-size: 1.2rem;
+  @media (max-width: 1000px) {
+    height: 53px;
+    width: 150px;
+    margin-bottom: 1.5rem;
+  }
 `
 
 const outlineBox = css({
-    height: '63px',
-    width: '200px',
-    border: '3px solid black',
-    position: 'relative',
-    bottom: '52px',
-    left: '10px',
-    zIndex: '-99',
+  height: "63px",
+  width: "200px",
+  border: "3px solid black",
+  position: "relative",
+  bottom: "52px",
+  left: "10px",
+  zIndex: "-99",
 })
 
 const PrimaryButton = ({ children }) => (
@@ -35,7 +40,15 @@ const PrimaryButton = ({ children }) => (
     <Button css={buttonHover}>
       <Link style={{ color: "white", textDecoration: "none" }}>{children}</Link>
     </Button>
-    <div css={outlineBox}></div>
+    <span
+      css={css`
+        @media (max-width: 1000px) {
+          display: none;
+        }
+      `}
+    >
+      <div css={outlineBox}></div>
+    </span>
   </div>
 )
 

@@ -2,6 +2,12 @@ import React from "react"
 import Highlight from "./highlight"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
+import styled from "@emotion/styled"
+
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
 
 const color = css({
   background: `linear-gradient(180deg,rgba(255,255,255,0) 55%, #fff947 50%)`,
@@ -11,15 +17,23 @@ const yellowHighlight = css({
   ":hover": color,
 })
 
+const StyledLink = styled(Link)`
+  color: black;
+  text-decoration: none;
+`
+
 const Header = () => (
   <div
-    style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      backgroundColor: "rgba(193, 148, 92, 0.14)",
-      padding: "20px 4rem",
-    }}
+    css={css`
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(193, 148, 92, 0.14);
+      padding: 20px 4rem;
+      @media (max-width: 1000px) {
+        padding: 20px 2rem;
+      }
+      `}
   >
     <Link to="/" style={{ textDecoration: "none" }}>
       <p style={{ fontWeight: "bolder", margin: "0" }} css={yellowHighlight}>
@@ -28,22 +42,24 @@ const Header = () => (
     </Link>
     <div
       css={{
-        display: 'flex',
+        display: "flex",
         "@media(max-width: 600px)": {
-          display: 'block',
+          display: "block",
         },
       }}
     >
       <Link to="" style={{ textDecoration: "none" }}>
         <li>
           <Highlight color="#7aada4" css={yellowHighlight}>
-            my work
+            <StyledLink to="/#my-work">my work</StyledLink>
           </Highlight>
         </li>
       </Link>
       <Link to="" style={{ textDecoration: "none" }}>
         <li>
-          <Highlight color="#7aada4">get in touch</Highlight>
+          <Highlight color="#7aada4">
+            <StyledLink to="/#get-in-touch">get in touch</StyledLink>
+          </Highlight>
         </li>
       </Link>
     </div>

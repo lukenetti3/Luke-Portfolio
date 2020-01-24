@@ -4,7 +4,7 @@ module.exports = {
     description: `This is my portfolio website to display my work.`,
     author: `@Luke Netti`,
   },
-  plugins: [ 
+  plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
     {
@@ -14,12 +14,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Abril Fatface', 'Muli:300 bolder 900']
-        }
-      }
-    }
-  ]
+          families: ["Abril Fatface", "Muli:300 bolder 900"],
+        },
+      },
+    },
+  ],
 }

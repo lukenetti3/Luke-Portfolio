@@ -4,7 +4,7 @@ import homeStyles from "../components/home.module.scss"
 import PrimaryButton from "../components/PrimaryButton"
 import Highlight from "../components/highlight"
 import { Link } from "gatsby"
-import { css, jsx } from "@emotion/core"
+import { css } from "@emotion/core"
 import projectImg from "../images/projectImg.jpg"
 import codeImg from "../images/code.jpg"
 import lukeImg from "../images/luke.jpg"
@@ -38,10 +38,6 @@ const specialP = css({
   textWeight: "bolder",
 })
 
-const boxShadow = css({
-  boxShadow: "2px 2px px 2px rgba(0,0,0,0.3)",
-})
-
 const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
@@ -61,15 +57,17 @@ const IndexPage = () => (
             I am awesome. Hire me. I love my wife and Melly. If you hire me, you
             will get my passion and Melly's professionalism.
           </p>
-          <PrimaryButton>see my work</PrimaryButton>
+          <PrimaryButton>
+            <StyledLink to="/projects">see my work</StyledLink>
+          </PrimaryButton>
           <div css={scrollLine} id={homeStyles.scroll}>
             Scroll
           </div>
         </Fade>
       </section>
 
-      <section className={homeStyles.flexGrid} id={homeStyles.Projects}>
-        <div className={homeStyles.col} style={{ marginRight: "7rem" }}>
+      <section className={`${homeStyles.flexGrid} ${homeStyles.Projects}`} id="my-work">
+        <div className={`${homeStyles.col} ${homeStyles.marginR}`}>
           <p css={categoryTxt}>Work</p>
           <h1>Projects</h1>
           <span
@@ -106,11 +104,10 @@ const IndexPage = () => (
       </section>
 
       <section
-        className={homeStyles.flexGrid}
-        id={homeStyles.Projects}
+        className={`${homeStyles.flexGrid} ${homeStyles.Projects}`}
         style={{ paddingTop: "0" }}
       >
-        <div className={homeStyles.col} style={{ marginRight: "7rem" }}>
+        <div className={`${homeStyles.col} ${homeStyles.marginR}`}>
           <p css={categoryTxt}>Skillset</p>
           <h1>Web Development</h1>
           <span

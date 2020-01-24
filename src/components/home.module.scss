@@ -1,10 +1,17 @@
 .hero {
     background-color: rgba(193, 148, 92, 0.14);
     padding: 9rem 25rem 9rem 4rem;
+    p {
+        padding-right: 25%;
+    }
 }
 
 .text-pad {
     padding: 20px 0;
+}
+
+.marginR {
+    margin-right: 7rem;
 }
 
 .flex-grid {
@@ -15,12 +22,12 @@
     flex: 1;
 }
 
-#Projects {
+.Projects {
     padding: 10rem 4rem;
 }
 
 #About {
-    padding: 10rem 4rem 5rem  4rem;
+    padding: 7rem 4rem 5rem  4rem;
     background-color: #c1605c;
     h1, h3, p {
         color: white;
@@ -32,10 +39,9 @@
 
 #About-me {
     padding: 10rem 4rem 5rem 4rem;
-
 }
 
-#Contact {
+.Contact {
     padding: 10rem 4rem 15rem 4rem;
     background-color: #7aada4;
     h1, p {
@@ -69,5 +75,32 @@
       }
     .img-pad {
         padding-left: 0;
+    }
+    .hero, .Projects {
+        padding: 2rem 2rem;
+        p {
+            padding: 0;
+        }
+    }
+    .col {
+        margin-right: 0;
+    }
+    #About, #About-me {
+        padding: 2rem;
+        h1 {
+            padding-top: 2rem;
+        }
+        div {
+            padding-top: 1rem;
+        }
+    }
+    .Contact {
+        padding: 2rem;
+        h1 {
+            padding-top: 2rem;
+        }
+        div {
+            padding-top: 1rem;
+        }
     }
   }
