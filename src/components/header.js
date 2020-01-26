@@ -50,7 +50,7 @@ const Header = () => (
     >
       <Link to="" style={{ textDecoration: "none" }}>
         <li>
-          <Highlight color="#7aada4" css={yellowHighlight}>
+          <Highlight color="#7aada4">
             <StyledLink to="/#my-work">my work</StyledLink>
           </Highlight>
         </li>

@@ -38,24 +38,17 @@
 }
 
 #About-me {
-    padding: 10rem 4rem 5rem 4rem;
+    padding: 7rem 4rem 5rem 4rem;
 }
 
 .Contact {
-    padding: 10rem 4rem 15rem 4rem;
+    padding: 10rem 4rem 7rem 4rem;
     background-color: #7aada4;
     h1, p {
         color: white;
     }
     div {
         padding-top: 5rem;
-    }
-}
-
-.img-pad {
-    // padding: 0 4rem 4rem 4rem;
-    &:hover {
-        box-shadow: 5px 5px 5px 5px #cfcfcf;
     }
 }
 
@@ -102,5 +95,8 @@
         div {
             padding-top: 1rem;
         }
+    }
+    .text-pad {
+        margin-top: 20px;
     }
   }

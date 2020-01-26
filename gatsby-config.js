@@ -17,9 +17,9 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Abril Fatface", "Muli:300 bolder 900"],
+          families: ["Abril Fatface", "Muli:100, 300 bolder 900", "Raleway:300"],
         },
-      },
-    },
+      }
+    }
   ],
 }

@@ -42,6 +42,9 @@ const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
 `
+const greenLink = css({
+  color: "#7aada4",
+})
 
 const IndexPage = () => (
   <div>
@@ -54,8 +57,8 @@ const IndexPage = () => (
             <Highlight color="#7aada4"> Engineer</Highlight>
           </h1>
           <p className={homeStyles.textPad}>
-            I am awesome. Hire me. I love my wife and Melly. If you hire me, you
-            will get my passion and Melly's professionalism.
+            I have a passion for web development and love to write code to make
+            everything a little bit easier for everyone.
           </p>
           <PrimaryButton>
             <StyledLink to="/projects">see my work</StyledLink>
@@ -66,7 +69,10 @@ const IndexPage = () => (
         </Fade>
       </section>
 
-      <section className={`${homeStyles.flexGrid} ${homeStyles.Projects}`} id="my-work">
+      <section
+        className={`${homeStyles.flexGrid} ${homeStyles.Projects}`}
+        id="my-work"
+      >
         <div className={`${homeStyles.col} ${homeStyles.marginR}`}>
           <p css={categoryTxt}>Work</p>
           <h1>Projects</h1>
@@ -88,9 +94,9 @@ const IndexPage = () => (
             Website Development
           </span>
           <p className={homeStyles.textPad}>
-            This is a homepage design and build for a concept project – a chat
-            application. I designed the page first then built a responsive web
-            page using Webflow.
+            Here is where you will find my work. I love building websites and
+            helping businesses see their full potential through developing
+            software.
           </p>
           <PrimaryButton>
             <StyledLink to="/projects">see projects</StyledLink>
@@ -117,7 +123,7 @@ const IndexPage = () => (
               backgroundColor: "#7aada4",
             }}
           >
-            WordPress
+            JavaScript
           </span>
           <span
             style={{
@@ -126,16 +132,30 @@ const IndexPage = () => (
               backgroundColor: "#7aada4",
             }}
           >
-            JavaScript
+            WordPress
           </span>
           <span style={{ padding: "4px", backgroundColor: "#7aada4" }}>
             HTML, CSS
           </span>
-          <p className={homeStyles.textPad}>
-            This is a homepage design and build for a concept project – a chat
-            application. I designed the page first then built a responsive web
-            page using Webflow.
+          <p className={homeStyles.textPad} style={{ marginBottom: "0" }}>
+            The website you will find here was built using WordPress and a
+            custom theme I designed. On my{" "}
+            <a href="https://github.com/lukenetti3" css={greenLink}>
+              Github
+            </a>
+            , and{" "}
+            <a href="https://codepen.io/lukenetti3" css={greenLink}>
+              Codepen
+            </a>{" "}
+            accounts there is a multitude of portfolio pieces that show what I
+            am capable of building.
           </p>
+          <p style={{ paddingTop: "0" }}>My main stregths are:</p>
+          <ul>
+            <li style={{ listStyleType: "circle" }}>JavaScript</li>
+            <li style={{ listStyleType: "circle" }}>HTML, CSS</li>
+            <li style={{ listStyleType: "circle" }}>WordPress</li>
+          </ul>
           <PrimaryButton>
             <StyledLink to="/projects">see projects</StyledLink>
           </PrimaryButton>
@@ -160,19 +180,18 @@ const IndexPage = () => (
           </Fade>
         </div>
         <div className={homeStyles.col}>
-          <p css={specialP}>Design</p>
-          <p>
-            I design beautiful and powerful websites for modern businesses. Any
-            business today needs a website that wins customers’ trust and helps
-            you do your business well. I make sure your website is up to that
-            standard.
-          </p>
           <p css={specialP}>Development</p>
           <p>
-            I build websites in Webflow where I can create responsive, powerful
-            and fully custom websites. Plus, Webflow has an incredibly simple
-            Content Editor for you and your team to edit website content quickly
-            and easily.
+            I care about writing clean and concise code. Writing software that
+            is functional and directional is important to me. This website was
+            built using GatsbyJS with the intent that speed and efficiency are
+            vital. I have begun the process of branching to React and developing
+            a skill set that is modern and current with web development trends.
+          </p>
+          <p>
+            Hiring me will give your company a focused and attention to detail
+            employee, looking to make the world a better place from behind a
+            screen.
           </p>
         </div>
       </section>
@@ -184,12 +203,12 @@ const IndexPage = () => (
           </div>
           <div className={homeStyles.col}>
             <Zoom>
-              <p css={specialP}>About Me</p>
+              <h1>About Me</h1>
               <p>
-                Hello there, I’m Luke, an Engineer with a passion for web
-                development and creating webspace for creatives. Thanks to my
-                wife, I recently found out I am an Enneagram 6. I am a hobby man
-                with a passion for making music, reading, and sports.
+                Hello there, I’m Luke, an engineer with a passion for web
+                development and creating software. Thanks to my wife, I recently
+                found out I am an Enneagram 6. I am a hobby man with a passion
+                for making music, reading, and sports.
               </p>
             </Zoom>
           </div>
