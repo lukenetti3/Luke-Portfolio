@@ -58,7 +58,7 @@ const IndexPage = () => (
           </h1>
           <p className={homeStyles.textPad}>
             I have a passion for web development and love to write code to make
-            everything a little bit easier for everyone.
+            everything a little bit easier for everyone. Development.
           </p>
           <PrimaryButton>
             <StyledLink to="/projects">see my work</StyledLink>
