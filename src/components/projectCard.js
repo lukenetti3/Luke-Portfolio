@@ -8,7 +8,7 @@ import Simon from "../images/simonGame.png"
 import homeStyles from "../components/home.module.scss"
 
 const card = css(`
-    width: 450px;
+    max-width: 450px;
     border-radius: 5px;
     margin: 70px auto 40px auto;
     box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
