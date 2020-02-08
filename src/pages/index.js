@@ -5,12 +5,11 @@ import PrimaryButton from "../components/PrimaryButton"
 import Highlight from "../components/highlight"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
-import projectImg from "../images/projectImg.jpg"
-import codeImg from "../images/code.jpg"
 import lukeImg from "../images/luke.jpg"
 import Fade from "react-reveal/Fade"
 import Zoom from "react-reveal/Zoom"
 import styled from "@emotion/styled"
+import ProjectCard from "../components/projectCard"
 
 const scrollLine = css({
   textTransform: "uppercase",
@@ -25,14 +24,6 @@ const leftImg = css({
   padding: "0 2rem 0 0",
 })
 
-const categoryTxt = css({
-  textTransform: "uppercase",
-  color: "grey",
-  fontSize: "1rem",
-  marginBottom: "0.5rem",
-  letterSpacing: "2px",
-})
-
 const specialP = css({
   fontSize: "2rem",
   textWeight: "bolder",
@@ -42,9 +33,7 @@ const StyledLink = styled(Link)`
   color: white;
   text-decoration: none;
 `
-const greenLink = css({
-  color: "#7aada4",
-})
+
 
 const IndexPage = () => (
   <div>
@@ -61,21 +50,20 @@ const IndexPage = () => (
             everything a little bit easier for everyone.
           </p>
           <PrimaryButton>
-            <StyledLink to="/projects">see my work</StyledLink>
+            <StyledLink to="/#my-work">see my work</StyledLink>
           </PrimaryButton>
           <div css={scrollLine} id={homeStyles.scroll}>
-            Scroll
+            <Link style={{color: "black", textDecoration: "none"}} to='/#my-work'>Scroll</Link>
           </div>
         </Fade>
       </section>
 
-      <section
-        className={`${homeStyles.flexGrid} ${homeStyles.Projects}`}
-        id="my-work"
-      >
-        <div className={`${homeStyles.col} ${homeStyles.marginR}`}>
-          <p css={categoryTxt}>Work</p>
+      <section className={homeStyles.Projects} id="my-work">
+        <div className={homeStyles.projectHeader}>
+          <p style={{ marginBottom: "0" }}>WORK</p>
           <h1>Projects</h1>
+        </div>
+        <div style={{ textAlign: "center" }}>
           <span
             style={{
               padding: "4px",
@@ -83,39 +71,17 @@ const IndexPage = () => (
               backgroundColor: "#7aada4",
             }}
           >
-            Website Design
+            HTML
           </span>
           <span
             style={{
               padding: "4px",
+              marginRight: "20px",
               backgroundColor: "#7aada4",
             }}
           >
-            Website Development
+            CSS
           </span>
-          <p className={homeStyles.textPad}>
-            Here is where you will find my work. I love building websites and
-            helping businesses see their full potential through developing
-            software.
-          </p>
-          <PrimaryButton>
-            <StyledLink to="/projects">see projects</StyledLink>
-          </PrimaryButton>
-        </div>
-        <div className={homeStyles.col}>
-          <Fade right>
-            <img src={projectImg} alt="" className={homeStyles.imgPad} />
-          </Fade>
-        </div>
-      </section>
-
-      <section
-        className={`${homeStyles.flexGrid} ${homeStyles.Projects}`}
-        style={{ paddingTop: "0" }}
-      >
-        <div className={`${homeStyles.col} ${homeStyles.marginR}`}>
-          <p css={categoryTxt}>Skillset</p>
-          <h1>Web Development</h1>
           <span
             style={{
               padding: "4px",
@@ -134,37 +100,18 @@ const IndexPage = () => (
           >
             WordPress
           </span>
-          <span style={{ padding: "4px", backgroundColor: "#7aada4" }}>
-            HTML, CSS
+          <span
+            style={{
+              padding: "4px",
+              marginRight: "20px",
+              backgroundColor: "#7aada4",
+            }}
+          >
+            jQuery
           </span>
-          <p className={homeStyles.textPad} style={{ marginBottom: "0" }}>
-            The website you will find here was built using WordPress and a
-            custom theme I designed. On my{" "}
-            <a href="https://github.com/lukenetti3" css={greenLink}>
-              Github
-            </a>
-            , and{" "}
-            <a href="https://codepen.io/lukenetti3" css={greenLink}>
-              Codepen
-            </a>{" "}
-            accounts there is a multitude of portfolio pieces that show what I
-            am capable of building.
-          </p>
-          <p style={{ paddingTop: "0" }}>My main stregths are:</p>
-          <ul>
-            <li style={{ listStyleType: "circle" }}>JavaScript</li>
-            <li style={{ listStyleType: "circle" }}>HTML, CSS</li>
-            <li style={{ listStyleType: "circle" }}>WordPress</li>
-          </ul>
-          <PrimaryButton>
-            <StyledLink to="/projects">see projects</StyledLink>
-          </PrimaryButton>
         </div>
-        <div className={homeStyles.col}>
-          <Fade right>
-            <img src={codeImg} alt="" className={homeStyles.imgPad} />
-          </Fade>
-        </div>
+
+        <ProjectCard />
       </section>
 
       <section
