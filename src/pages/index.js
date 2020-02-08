@@ -98,15 +98,6 @@ const IndexPage = () => (
               backgroundColor: "#7aada4",
             }}
           >
-            WordPress
-          </span>
-          <span
-            style={{
-              padding: "4px",
-              marginRight: "20px",
-              backgroundColor: "#7aada4",
-            }}
-          >
             jQuery
           </span>
         </div>
