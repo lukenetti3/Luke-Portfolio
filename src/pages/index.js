@@ -98,7 +98,7 @@ const IndexPage = () => (
               backgroundColor: "#7aada4",
             }}
           >
-            jQuery
+            React
           </span>
         </div>
 

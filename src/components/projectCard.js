@@ -4,7 +4,7 @@ import { css } from "@emotion/core"
 import Calculator from "../images/calculator.png"
 import Wedding from "../images/weddingImg.png"
 import Pomodoro from "../images/pomodoroClock.png"
-import Simon from "../images/simonGame.png"
+import Weather from "../images/weatherApp.png"
 import homeStyles from "../components/home.module.scss"
 
 const card = css(`
@@ -52,28 +52,26 @@ const A = styled.a`
 const ProjectCard = () => (
   <div>
     <div className={homeStyles.flexGrid}>
-      <div className={homeStyles.col}>
+    <div className={homeStyles.col}>
         <div css={card}>
           <img
-            src={Calculator}
+            src={Weather}
             alt=""
             style={{ borderRadius: "5px 5px 0 0" }}
             css={zoomImg}
           />
           <div css={bodyPadding}>
-            <p style={{ fontSize: "1.8rem", fontWeight: "bold", marginBottom: '4px' }}>
-              JavaScript Calculator
-            </p>
+            <p style={{ fontSize: "1.8rem", fontWeight: "bold", marginBottom: '4px' }}>Weather App</p>
             <p style={{fontSize: '1.3rem', paddingBottom: '35px'}}>
-              This is a replica build of the standard iPhone calculator app. 
-              It was built using HTML, CSS, and JavaScript/jQuery.
+              A weather app built using React hooks, and a weather API.
+              Built using create-react-app, and Bootstrap for styling.
             </p>
 
             <div className={homeStyles.flexGrid}>
               <div style={{ flex: "1" }}>
                 <ProjectButton style={{ backgroundColor: "#7aada4" }}>
                   <A
-                    href="https://codepen.io/lukenetti3/full/BYeQZj"
+                    href="https://gallant-mirzakhani-a5f34a.netlify.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -83,14 +81,15 @@ const ProjectCard = () => (
               </div>
               <div style={{ flex: "1" }}>
                 <ProjectButton style={{ backgroundColor: "black" }}>
-                  <A
-                    href="https://github.com/lukenetti3/JavaScript-Calculator"
+                <A
+                    href="https://github.com/lukenetti3/Weather-App"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Code
                   </A>
                 </ProjectButton>
+      
               </div>
             </div>
           </div>
@@ -181,23 +180,25 @@ const ProjectCard = () => (
       <div className={homeStyles.col}>
         <div css={card}>
           <img
-            src={Simon}
+            src={Calculator}
             alt=""
             style={{ borderRadius: "5px 5px 0 0" }}
             css={zoomImg}
           />
           <div css={bodyPadding}>
-            <p style={{ fontSize: "1.8rem", fontWeight: "bold", marginBottom: '4px' }}>Simon Game</p>
+            <p style={{ fontSize: "1.8rem", fontWeight: "bold", marginBottom: '4px' }}>
+              JavaScript Calculator
+            </p>
             <p style={{fontSize: '1.3rem', paddingBottom: '35px'}}>
-              This is an old Simon memory game. Select the 'on' radio button
-              and click 'start.' Built using HTML, CSS, and JavaScript/jQuery. 
+              This is a replica build of the standard iPhone calculator app. 
+              It was built using HTML, CSS, and JavaScript/jQuery.
             </p>
 
             <div className={homeStyles.flexGrid}>
               <div style={{ flex: "1" }}>
                 <ProjectButton style={{ backgroundColor: "#7aada4" }}>
                   <A
-                    href="https://codepen.io/lukenetti3/full/jzwmyY"
+                    href="https://codepen.io/lukenetti3/full/BYeQZj"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -207,8 +208,8 @@ const ProjectCard = () => (
               </div>
               <div style={{ flex: "1" }}>
                 <ProjectButton style={{ backgroundColor: "black" }}>
-                <A
-                    href="https://github.com/lukenetti3/Simon-Game"
+                  <A
+                    href="https://github.com/lukenetti3/JavaScript-Calculator"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
