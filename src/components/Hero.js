@@ -45,16 +45,3 @@ const Hero = () => (
 
 export default Hero
 
-// export const query = graphql`
-// query {
-//   gcms {
-//     hero(where: {id: "ck8s6vi2w0bpc0177183pn4qh"}) {
-//       title
-//       description {
-//         text
-//       }
-//       button
-//     }
-//   }
-// }
-// `
