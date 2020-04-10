@@ -1,5 +1,5 @@
 import React from "react"
-import Highlight from "./highlight"
+import Highlight from "./Highlight"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"

@@ -20,6 +20,6 @@ module.exports = {
           families: ["Abril Fatface", "Muli:100, 300 bolder 900", "Raleway:300"],
         },
       }
-    }
+    },
   ],
 }

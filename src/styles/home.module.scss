@@ -10,6 +10,12 @@
     padding: 20px 0;
 }
 
+.skills-icons {
+    padding: 4px;
+    margin-right: 20px;
+    background-color: #7aada4;
+}
+
 .marginR {
     margin-right: 7rem;
 }
@@ -68,7 +74,7 @@
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1030px) {
     .flex-grid {
         display: block;
         justify-content: center;

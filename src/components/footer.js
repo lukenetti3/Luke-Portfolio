@@ -1,6 +1,6 @@
 import React from "react"
-import Highlight from "./highlight"
-import homeStyles from "./home.module.scss"
+import Highlight from "./Highlight"
+import homeStyles from "../styles/home.module.scss"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import Flip from "react-reveal/Flip"
