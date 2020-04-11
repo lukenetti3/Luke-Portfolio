@@ -4,7 +4,7 @@ import Highlight from "../components/Highlight"
 import { css } from "@emotion/core"
 import Fade from "react-reveal/Fade"
 import styled from "@emotion/styled"
-import { Link } from "gatsby"
+import { Link, graphql, StaticQuery } from "gatsby"
 import PrimaryButton from "../components/PrimaryButton"
 
 const StyledLink = styled(Link)`
@@ -13,16 +13,30 @@ const StyledLink = styled(Link)`
 `
 
 const scrollLine = css({
-    textTransform: "uppercase",
-    position: "absolute",
-    right: "15rem",
-    top: "50rem",
-    transform: "rotate(90deg)",
-    borderBottom: "2px solid black",
-  })
+  textTransform: "uppercase",
+  position: "absolute",
+  right: "15rem",
+  top: "50rem",
+  transform: "rotate(90deg)",
+  borderBottom: "2px solid black",
+})
 
 const Hero = () => (
-    <section className={homeStyles.hero}>
+  <StaticQuery
+    query={graphql`
+      query {
+        gcms {
+          heroes {
+            button
+            description {
+              text
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <section className={homeStyles.hero}>
         <Fade bottom>
           <h1>
             Hi, Luke Netti, <Highlight color="#7aada4">Web Developer</Highlight>{" "}
@@ -30,31 +44,24 @@ const Hero = () => (
             <Highlight color="#7aada4"> Engineer</Highlight>
           </h1>
           <p className={homeStyles.textPad}>
-            I have a passion for web development and love to write code to make
-            everything a little bit easier for everyone.
+            {data.gcms.heroes[0].description.text}
+            {console.log(data.gcms.heroes[0].button)}
           </p>
           <PrimaryButton>
-            <StyledLink to="/#my-work">see my work</StyledLink>
+            <StyledLink to="/#my-work">{data.gcms.heroes[0].button}</StyledLink>
           </PrimaryButton>
           <div css={scrollLine} id={homeStyles.scroll}>
-            <Link style={{color: "black", textDecoration: "none"}} to='/#my-work'>Scroll</Link>
+            <Link
+              style={{ color: "black", textDecoration: "none" }}
+              to="/#my-work"
+            >
+              Scroll
+            </Link>
           </div>
         </Fade>
       </section>
+    )}
+  />
 )
 
 export default Hero
-
-// export const query = graphql`
-// query {
-//   gcms {
-//     hero(where: {id: "ck8s6vi2w0bpc0177183pn4qh"}) {
-//       title
-//       description {
-//         text
-//       }
-//       button
-//     }
-//   }
-// }
-// `
