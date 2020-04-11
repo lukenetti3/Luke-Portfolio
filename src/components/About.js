@@ -48,8 +48,8 @@ const About = () => (
           </div>
           <div className={homeStyles.col}>
             <p css={specialP}>Development</p>
-            <p dangerouslySetInnerHTML={{__html: data.gcms.aboutMes[0].developmentParagraph.html}}>  
-            </p>
+            <div dangerouslySetInnerHTML={{__html: data.gcms.aboutMes[0].developmentParagraph.html}}>  
+            </div>
           </div>
         </section>
 
@@ -61,8 +61,8 @@ const About = () => (
             <div className={homeStyles.col}>
               <Zoom>
                 <h1>About Me</h1>
-                <p dangerouslySetInnerHTML={{__html: data.gcms.aboutMes[0].aboutMeParagraph.html}}>  
-            </p>
+                <div dangerouslySetInnerHTML={{__html: data.gcms.aboutMes[0].aboutMeParagraph.html}}>  
+                </div>
               </Zoom>
             </div>
           </div>
