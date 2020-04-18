@@ -11,6 +11,7 @@
 
 .img-border {
     border-radius: 5px 5px 0 0;
+    width: 100%;
 }
 
 .card-flex {
@@ -28,11 +29,17 @@
 }
 
 .body-padding {
-    padding: 0 20px 20px 20px;
+    padding: 0 2rem 2em 2rem;
 }
 
 @media (max-width: 960px) {
     .card-flex {
         justify-content: center;
+    }
+}
+
+@media (max-width: 530px) {
+    .card-styles {
+        width: 100%;
     }
 }
