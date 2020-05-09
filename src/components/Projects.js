@@ -9,7 +9,7 @@ const Projects = () => (
     query={graphql`
       query {
         gcms {
-          projectCards {
+          projectCards(orderBy: order_DESC) {
             title
             appUrl
             codeUrl
