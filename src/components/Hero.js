@@ -3,14 +3,8 @@ import homeStyles from "../styles/home.module.scss"
 import Highlight from "../components/Highlight"
 import { css } from "@emotion/core"
 import Fade from "react-reveal/Fade"
-import styled from "@emotion/styled"
 import { Link, graphql, StaticQuery } from "gatsby"
 import PrimaryButton from "../components/PrimaryButton"
-
-const StyledLink = styled(Link)`
-  color: white;
-  text-decoration: none;
-`
 
 const scrollLine = css({
   textTransform: "uppercase",
@@ -45,11 +39,9 @@ const Hero = () => (
           </h1>
           <p className={homeStyles.textPad}>
             {data.gcms.heroes[0].description.text}
-            {console.log(data.gcms.heroes[0].button)}
           </p>
-          <PrimaryButton>
-            <StyledLink to="/#my-work">{data.gcms.heroes[0].button}</StyledLink>
-          </PrimaryButton>
+          <PrimaryButton />
+          
           <div css={scrollLine} id={homeStyles.scroll}>
             <Link
               style={{ color: "black", textDecoration: "none" }}

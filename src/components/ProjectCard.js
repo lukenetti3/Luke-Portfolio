@@ -35,45 +35,37 @@ const A = styled.a`
 `
 
 const ProjectCard = props => (
-    <div>
-      <div className={projectCardStyles.cardStyles}>
-        <img
-          src={props.img}
-          alt=""
-          className={projectCardStyles.imgBorder}
-          css={zoomImg}
-        />
-        <div className={projectCardStyles.bodyPadding}>
-          <p className={projectCardStyles.title}>{props.title}</p>
-          <p className={projectCardStyles.description}>{props.description}</p>
+  <div>
+    <div className={projectCardStyles.cardStyles}>
+      <img
+        src={props.img}
+        alt=""
+        className={projectCardStyles.imgBorder}
+        css={zoomImg}
+      />
+      <div className={projectCardStyles.bodyPadding}>
+        <p className={projectCardStyles.title}>{props.title}</p>
+        <p className={projectCardStyles.description}>{props.description}</p>
 
-          <div className={homeStyles.flexGrid}>
-            <div style={{ flex: "1" }}>
-              <ProjectButton style={{ backgroundColor: "#7aada4" }}>
-                <A
-                  href={props.appLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  App
-                </A>
+        <div className={homeStyles.flexGrid}>
+          <div style={{ flex: "1" }}>
+            <A href={props.appLink} target="_blank" rel="noopener noreferrer">
+              <ProjectButton style={{ backgroundColor: "#7aada4", cursor: "pointer" }}>
+                App
               </ProjectButton>
-            </div>
-            <div style={{ flex: "1" }}>
-              <ProjectButton style={{ backgroundColor: "black" }}>
-                <A
-                  href={props.codeLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Code
-                </A>
+            </A>
+          </div>
+          <div style={{ flex: "1" }}>
+            <A href={props.codeLink} target="_blank" rel="noopener noreferrer">
+              <ProjectButton style={{ backgroundColor: "black", cursor: "pointer" }}>
+                Code
               </ProjectButton>
-            </div>
+            </A>
           </div>
         </div>
       </div>
     </div>
+  </div>
 )
 
 export default ProjectCard

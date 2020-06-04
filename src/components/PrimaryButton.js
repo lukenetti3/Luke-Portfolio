@@ -37,9 +37,12 @@ const outlineBox = css({
 
 const PrimaryButton = ({ children }) => (
   <div>
-    <Button css={buttonHover}>
-      <Link style={{ color: "white", textDecoration: "none" }}>{children}</Link>
-    </Button>
+    <Link to="/#my-work" style={{ color: "white", textDecoration: "none" }}>
+      <Button css={buttonHover} style={{ cursor: "pointer" }}>
+        see my work
+      </Button>
+    </Link>
+
     <span
       css={css`
         @media (max-width: 1000px) {
