@@ -56,7 +56,7 @@ const Footer = () => (
               </div>
             </Flip>
             <Hr />
-            <div dangerouslySetInnerHTML={{__html: data.gcms.footers[0].paragraph.html}}>
+            <div style={{paddingTop: "5px"}}dangerouslySetInnerHTML={{__html: data.gcms.footers[0].paragraph.html}}>
               
             </div>
             <div style={{ paddingTop: "10px" }}>
