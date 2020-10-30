@@ -133,7 +133,7 @@ const Projects = () => (
                   imagery and his personality reflected through the website.
                 </p>
                 <A
-                  href="https://emilynettiphotography.com"
+                  href="https://bryanacavellier.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
