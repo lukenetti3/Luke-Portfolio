@@ -98,7 +98,7 @@ const Projects = () => (
                   simple, and imagery focused.
                 </p>
                 <A
-                  href="https://emilynettiphotography.com"
+                  href="https://emilynettiphotography.netlify.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
