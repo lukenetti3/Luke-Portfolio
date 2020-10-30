@@ -1,12 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Portfolio`,
+    title: `Luke Netti Portfolio`,
     description: `This is my portfolio website to display my work.`,
     author: `@Luke Netti`,
   },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
