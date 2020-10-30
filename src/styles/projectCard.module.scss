@@ -32,6 +32,17 @@
     padding: 0 2rem 2em 2rem;
 }
 
+.website-box {
+    width: 45%;
+    padding-top: 100px;
+}
+
+.vertical-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 @media (max-width: 960px) {
     .card-flex {
         justify-content: center;
@@ -41,5 +52,14 @@
 @media (max-width: 530px) {
     .card-styles {
         width: 100%;
+    }
+}
+
+@media (max-width: 950px) {
+    .website-box {
+        width: 100%;
+    }
+    .card-flex:nth-child(4) {
+        flex-direction: column-reverse;
     }
 }
