@@ -133,7 +133,7 @@ const Projects = () => (
                   imagery and his personality reflected through the website.
                 </p>
                 <A
-                  href="https://bryanacavellier.com"
+                  href="https://bryancavellier.com"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
