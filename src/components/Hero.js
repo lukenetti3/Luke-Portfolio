@@ -6,15 +6,6 @@ import Fade from "react-reveal/Fade"
 import { Link, graphql, StaticQuery } from "gatsby"
 import PrimaryButton from "../components/PrimaryButton"
 
-const scrollLine = css({
-  textTransform: "uppercase",
-  position: "absolute",
-  right: "15rem",
-  top: "50rem",
-  transform: "rotate(90deg)",
-  borderBottom: "2px solid black",
-})
-
 const Hero = () => (
   <StaticQuery
     query={graphql`
@@ -41,15 +32,6 @@ const Hero = () => (
             {data.gcms.heroes[0].description.text}
           </p>
           <PrimaryButton />
-          
-          <div css={scrollLine} id={homeStyles.scroll}>
-            <Link
-              style={{ color: "black", textDecoration: "none" }}
-              to="/#my-work"
-            >
-              Scroll
-            </Link>
-          </div>
         </Fade>
       </section>
     )}
