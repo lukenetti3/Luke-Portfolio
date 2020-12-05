@@ -1,9 +1,8 @@
 import React from "react"
 import homeStyles from "../styles/home.module.scss"
 import Highlight from "../components/Highlight"
-import { css } from "@emotion/core"
 import Fade from "react-reveal/Fade"
-import { Link, graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import PrimaryButton from "../components/PrimaryButton"
 
 const Hero = () => (
