@@ -9,57 +9,20 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]')
 }
 
-const color = css({
-  background: `linear-gradient(180deg,rgba(255,255,255,0) 55%, #fff947 50%)`,
-})
-
-const yellowHighlight = css({
-  ":hover": color,
-})
-
-const StyledLink = styled(Link)`
-  color: black;
-  text-decoration: none;
-`
-
 const Header = () => (
-  <div
-    css={css`
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: rgba(193, 148, 92, 0.14);
-      padding: 20px 4rem;
-      @media (max-width: 1000px) {
-        padding: 20px 2rem;
-      }
-      `}
-  >
-    <Link to="/" style={{ textDecoration: "none" }}>
-      <p style={{ fontWeight: "bolder", margin: "0" }} css={yellowHighlight}>
-        Luke Netti.
-      </p>
+  <div className="flex justify-between py-5">
+    <Link to="/">
+      <p className="font-header font-bold text-xl">Luke Netti.</p>
     </Link>
-    <div
-      css={{
-        display: "flex",
-        "@media(max-width: 600px)": {
-          display: "block",
-        },
-      }}
-    >
-      <Link to="" style={{ textDecoration: "none" }}>
-        <li>
-          <Highlight color="#7aada4">
-            <StyledLink to="/#my-work">my work</StyledLink>
-          </Highlight>
+    <div className="flex">
+      <Link to="">
+        <li className="list-none px-5 text-lg">
+          <Link to="/#my-work">my work</Link>
         </li>
       </Link>
-      <Link to="" style={{ textDecoration: "none" }}>
-        <li>
-          <Highlight color="#7aada4">
-            <StyledLink to="/#get-in-touch">get in touch</StyledLink>
-          </Highlight>
+      <Link to="">
+        <li className="list-none px-5 text-lg">
+          <Link to="/#get-in-touch">get in touch</Link>
         </li>
       </Link>
     </div>

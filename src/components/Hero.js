@@ -2,7 +2,7 @@ import React from "react"
 import homeStyles from "../styles/home.module.scss"
 import Highlight from "../components/Highlight"
 import Fade from "react-reveal/Fade"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 import PrimaryButton from "../components/PrimaryButton"
 
 const Hero = () => (
@@ -20,17 +20,20 @@ const Hero = () => (
       }
     `}
     render={data => (
-      <section className={homeStyles.hero}>
+      <section className="bg-blue-500 mt-2 p-20">
         <Fade bottom>
-          <h1>
-            Hi, Luke Netti, <Highlight color="#7aada4">Web Developer</Highlight>{" "}
-            and
-            <Highlight color="#7aada4"> Engineer</Highlight>
+          <h1 className="font-header font-bold text-white text-6xl mb-4">
+            Hi, Luke Netti, Web Developer and Engineer
           </h1>
-          <p className={homeStyles.textPad}>
+          <p className="font-body text-white text-lg mb-8">
             {data.gcms.heroes[0].description.text}
           </p>
-          <PrimaryButton />
+          <Link
+            to="/#my-work"
+            className="bg-blue-900 px-5 py-4 rounded-3xl shadow-sm text-white"
+          >
+            see my work
+          </Link>
         </Fade>
       </section>
     )}

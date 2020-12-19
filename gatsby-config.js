@@ -8,19 +8,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
-    },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Abril Fatface", "Muli:100, 300 bolder 900", "Raleway:300"],
-        },
-      }
     },
     {
       resolve: "gatsby-source-graphql",

@@ -1,10 +1,11 @@
 import React from "react"
-import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import Projects from "../components/Projects"
 import About from "../components/About"
 import { Helmet } from "react-helmet"
 import favicon from "../images/favicon.png"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 const IndexPage = () => (
   <div>
@@ -14,11 +15,13 @@ const IndexPage = () => (
           <link rel="canonical" href="https://lukenetti.com" />
           <link rel="icon" href={favicon} />
         </Helmet>
-    <Layout>
+    <div className="w-10/12 mx-auto">
+      <Header />
       <Hero />
       <Projects />
       <About />
-    </Layout>
+      <Footer />
+    </div>
   </div>
 )
 
