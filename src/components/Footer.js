@@ -1,25 +1,7 @@
 import React from "react"
-import Highlight from "./Highlight"
-import homeStyles from "../styles/home.module.scss"
-import { css } from "@emotion/core"
-import styled from "@emotion/styled"
 import Flip from "react-reveal/Flip"
 import { FaGithub, FaTwitter, FaCodepen } from "react-icons/fa"
 import { StaticQuery, graphql } from "gatsby"
-
-const specialP = css({
-  fontFamily: "Raleway",
-  fontWeight: "300",
-  fontSize: "24px",
-  color: "white",
-})
-
-const Hr = styled.hr`
-  margin-top: 5rem;
-  background: white;
-  width: 20%;
-  height: 3px;
-`
 
 const Footer = () => (
   <StaticQuery
@@ -39,27 +21,26 @@ const Footer = () => (
     render={data => (
       <div>
         <section
-          className={`${homeStyles.flexGrid} ${homeStyles.Contact}`}
+          className="bg-gray-800 text-white flex flex-wrap justify-between mt-16 py-32 px-20 transform rotate-1 rounded-3xl shadow-md"
           id="get-in-touch"
-          style={{ paddingTop: "0" }}
         >
-          <div className={homeStyles.col}>
-            <h1>
-              Want to <Highlight color="black">Work?</Highlight>
-            </h1>
+          <div className="max-w-xl transform -rotate-1">
+            <h1 className="text-6xl font-header font-bold">Want to Work?</h1>
           </div>
-          <div className={homeStyles.col}>
+          <div className="font-body text-xl leading-8 max-w-xl transform -rotate-1">
             <Flip top cascade>
-              <div style={{ padding: "0" }}>
-                <p css={specialP}>Email: {data.gcms.footers[0].email}</p>
-                <p css={specialP}>Phone: {data.gcms.footers[0].phone}</p>
+              <div>
+                <p className="mb-10">Email: {data.gcms.footers[0].email}</p>
+                <p className="mb-10">Phone: {data.gcms.footers[0].phone}</p>
               </div>
             </Flip>
-            <Hr />
-            <div style={{paddingTop: "5px"}}dangerouslySetInnerHTML={{__html: data.gcms.footers[0].paragraph.html}}>
-              
-            </div>
-            <div style={{ paddingTop: "10px" }}>
+            <div
+              className="font-body"
+              dangerouslySetInnerHTML={{
+                __html: data.gcms.footers[0].paragraph.html,
+              }}
+            ></div>
+            <div className="flex flex-wrap mt-10">
               <a
                 href="https://github.com/lukenetti3"
                 target="_blank"
@@ -102,8 +83,8 @@ const Footer = () => (
             </div>
           </div>
         </section>
-        <div style={{ backgroundColor: "#7aada4", padding: "0 1rem 0 5%" }}>
-          <p style={{ color: "white", marginBottom: "0", fontSize: "15px" }}>
+        <div>
+          <p className="font-body">
             © All rights reserved - Luke Netti
           </p>
         </div>

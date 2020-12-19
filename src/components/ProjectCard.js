@@ -1,67 +1,31 @@
 import React from "react"
-import styled from "@emotion/styled"
-import { css } from "@emotion/core"
-import homeStyles from "../styles/home.module.scss"
-import projectCardStyles from "../styles/projectCard.module.scss"
-
-const ProjectButton = styled.button`
-  color: white;
-  border: none;
-  height: 43px;
-  width: 120px;
-  border-radius: 100px;
-  font-size: 1rem;
-  @media (max-width: 1000px) {
-    height: 45px;
-    width: 130px;
-    margin-bottom: 1.5rem;
-  }
-  &:hover {
-    transform: scale(1.1);
-    transition: all 0.5s;
-  }
-`
-
-const zoomImg = css(`
-&:hover {
-    transform: scale(1.1);
-  }
-  transition: all 1s;
-`)
-
-const A = styled.a`
-  color: white;
-  text-decoration: none;
-`
 
 const ProjectCard = props => (
-  <div>
-    <div className={projectCardStyles.cardStyles}>
-      <img
-        src={props.img}
-        alt=""
-        className={projectCardStyles.imgBorder}
-        css={zoomImg}
-      />
-      <div className={projectCardStyles.bodyPadding}>
-        <p className={projectCardStyles.title}>{props.title}</p>
-        <p className={projectCardStyles.description}>{props.description}</p>
+  <div className="max-w-lg m-10 rounded-xl shadow-md">
+    <div clasName="">
+      <img src={props.img} alt={props.title} className="rounded-t-xl" />
+      <div className="px-10 py-3">
+        <p className="text-2xl font-bold font-header pb-2">{props.title}</p>
+        <p className="font-body pb-2 text-lg">{props.description}</p>
 
-        <div className={homeStyles.flexGrid}>
-          <div style={{ flex: "1" }}>
-            <A href={props.appLink} target="_blank" rel="noopener noreferrer">
-              <ProjectButton style={{ backgroundColor: "#7aada4", cursor: "pointer" }}>
-                App
-              </ProjectButton>
-            </A>
-          </div>
-          <div style={{ flex: "1" }}>
-            <A href={props.codeLink} target="_blank" rel="noopener noreferrer">
-              <ProjectButton style={{ backgroundColor: "black", cursor: "pointer" }}>
-                Code
-              </ProjectButton>
-            </A>
-          </div>
+        <div className="flex mt-5 pb-4">
+          <a
+            className="mr-5 transition duration-500 transform hover:scale-110 from-blue-900 to-blue-800 bg-gradient-to-r px-7 py-2 rounded-3xl shadow-sm text-white"
+            href={props.appLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            App
+          </a>
+
+          <a
+            className="transition duration-500 transform hover:scale-110 border-2 border-blue-700 px-7 py-2 rounded-3xl shadow-sm text-blue-700"
+            href={props.codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Code
+          </a>
         </div>
       </div>
     </div>

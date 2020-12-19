@@ -1,34 +1,8 @@
 import React from "react"
-import homeStyles from "../styles/home.module.scss"
 import ProjectCard from "../components/ProjectCard"
-import projectCardStyles from "../styles/projectCard.module.scss"
 import { StaticQuery, graphql } from "gatsby"
-import styled from "@emotion/styled"
 import photographyImg from "../images/PhotographyMockup.png"
 import videographyImg from "../images/BryanCav.png"
-
-const ProjectButton = styled.button`
-  color: white;
-  border: none;
-  height: 43px;
-  width: 120px;
-  border-radius: 100px;
-  font-size: 1rem;
-  @media (max-width: 1000px) {
-    height: 45px;
-    width: 130px;
-    margin-bottom: 1.5rem;
-  }
-  &:hover {
-    transform: scale(1.1);
-    transition: all 0.5s;
-  }
-`
-
-const A = styled.a`
-  color: white;
-  text-decoration: none;
-`
 
 const Projects = () => (
   <StaticQuery
@@ -50,19 +24,26 @@ const Projects = () => (
       }
     `}
     render={data => (
-      <section className={homeStyles.Projects} id="my-work">
-        <div className={homeStyles.projectHeader}>
-          <p style={{ marginBottom: "0" }}>WORK</p>
-          <h1>Projects</h1>
+      <section className="mt-14" id="my-work">
+        <div className="flex justify-center align-middle">
+          <h2 className="font-header text-6xl font-semibold py-5">Projects</h2>
         </div>
-        <div style={{ textAlign: "center" }}>
-          <span className={homeStyles.skillsIcons}>HTML</span>
-          <span className={homeStyles.skillsIcons}>CSS</span>
-          <span className={homeStyles.skillsIcons}>JavaScript</span>
-          <span className={homeStyles.skillsIcons}>React</span>
+        <div className="flex justify-center">
+          <span className="mx-5 px-1 rounded-sm bg-blue-300 text-white">
+            HTML
+          </span>
+          <span className="mx-5 px-1 rounded-sm bg-blue-400 text-white">
+            CSS
+          </span>
+          <span className="mx-5 px-1 rounded-sm bg-blue-500 text-white">
+            JavaScript
+          </span>
+          <span className="mx-5 px-1 rounded-sm bg-blue-500 text-white">
+            React
+          </span>
         </div>
 
-        <div className={projectCardStyles.cardFlex}>
+        <div className="flex flex-wrap justify-center">
           {data.gcms.projectCards.map(item => (
             <ProjectCard
               img={item.image.url}
@@ -74,75 +55,66 @@ const Projects = () => (
           ))}
         </div>
 
-        <div
-          className={homeStyles.projectHeader}
-          style={{ marginTop: "100px" }}
-        >
-          <h1>Websites</h1>
-          <div style={{ textAlign: "center" }}>
-            <span className={homeStyles.skillsIcons}>WordPress</span>
-            <span className={homeStyles.skillsIcons}>GatsbyJS</span>
-            <span className={homeStyles.skillsIcons}>Custom Design</span>
+        <div className="mt-24">
+          <h1 className="font-header text-6xl font-semibold text-center pb-5">
+            Websites
+          </h1>
+          <div className="flex justify-center">
+            <span className="mx-5 px-1 rounded-sm bg-green-300 text-white">
+              WordPress
+            </span>
+            <span className="mx-5 px-1 rounded-sm bg-green-400 text-white">
+              GatsbyJS
+            </span>
+            <span className="mx-5 px-1 rounded-sm bg-green-500 text-white">
+              Custom Design
+            </span>
           </div>
-          <div className={projectCardStyles.cardFlex}>
-            <div className={projectCardStyles.websiteBox}>
-              <div className={projectCardStyles.verticalText}>
-                <p style={{ fontSize: "27px", fontWeight: "bold" }}>
-                  Photographer Website
-                </p>
-                <p>
-                  A website for a photographer using GatsbyJS and Prismic.io as
-                  a CMS. The styling was done using Flexbox and CSS Grid. The
-                  design was done with the intent to keep the website clean,
-                  simple, and imagery focused.
-                </p>
-                <A
-                  href="https://emilynettiphotography.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ProjectButton
-                    style={{ backgroundColor: "#7aada4", cursor: "pointer" }}
-                  >
-                    Website
-                  </ProjectButton>
-                </A>
-              </div>
+          <div className="flex justify-center flex-wrap mt-24">
+            <div className="">
+              <p className="font-bold text-4xl mb-7 font-header">
+                Photographer Website
+              </p>
+              <p className="max-w-2xl mb-10 font-body text-lg">
+                A website for a photographer using GatsbyJS and Prismic.io as a
+                CMS. The styling was done using Flexbox and CSS Grid. The design
+                was done with the intent to keep the website clean, simple, and
+                imagery focused.
+              </p>
+              <a
+                className="transition duration-500 transform hover:scale-110 from-green-500 to-green-400 bg-gradient-to-r px-7 py-3 rounded-3xl shadow-sm text-white"
+                href="https://emilynettiphotography.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Website
+              </a>
             </div>
-            <div className={projectCardStyles.websiteBox}>
+            <div className="max-w-2xl pt-10 md:pt-0">
               <img src={photographyImg} alt="computer screen mockup" />
             </div>
           </div>
 
-          
-
-          <div className={projectCardStyles.cardFlex}>
-            <div className={projectCardStyles.websiteBox}>
+          <div className="flex flex-wrap-reverse mt-24">
+            <div className="max-w-xl md:pt-0 pt-10">
               <img src={videographyImg} alt="computer screen mockup" />
             </div>
-            <div className={projectCardStyles.websiteBox}>
-              <div className={projectCardStyles.verticalText}>
-                <p style={{ fontSize: "27px", fontWeight: "bold" }}>
-                  Videography Website
-                </p>
-                <p>
-                  This is the website design and development of a videographer
-                  portfolio website. This was built using WordPress and a page
-                  builder. The design goal was to display his work but also show
-                  imagery and his personality reflected through the website.
-                </p>
-                <A
-                  href="https://bryancavellier.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <ProjectButton
-                    style={{ backgroundColor: "#7aada4", cursor: "pointer" }}
-                  >
-                    Website
-                  </ProjectButton>
-                </A>
-              </div>
+            <div className="max-w-2xl md:pl-20 pl-0">
+              <p className="font-bold text-4xl mb-7 font-header">Videography Website</p>
+              <p className="mb-10 font-body text-lg">
+                This is the website design and development of a videographer
+                portfolio website. This was built using WordPress and a page
+                builder. The design goal was to display his work but also show
+                imagery and his personality reflected through the website.
+              </p>
+              <a
+                className="transition duration-500 transform hover:scale-110 from-green-500 to-green-400 bg-gradient-to-r px-7 py-3 rounded-3xl shadow-sm text-white"
+                href="https://bryancavellier.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Website
+              </a>
             </div>
           </div>
         </div>
