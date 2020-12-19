@@ -63,7 +63,6 @@ const Projects = () => (
         </div>
 
         <div className={projectCardStyles.cardFlex}>
-          {console.log(data.gcms.projectCards)}
           {data.gcms.projectCards.map(item => (
             <ProjectCard
               img={item.image.url}
