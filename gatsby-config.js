@@ -27,5 +27,14 @@ module.exports = {
           url: "https://api-us-east-1.graphcms.com/v2/ck8t64wop04og01xp5x7m4ej4/master",
       },
   },
+  {
+    resolve: `gatsby-plugin-google-gtag`,
+    options: {
+      // You can add multiple tracking ids and a pageview event will be fired for all of them.
+      trackingIds: [
+        process.env.GOOGLE_ANALYTICS_TRACKING_ID || "none", // Google Analytics / GA
+      ],
+    },
+  },
   ],
 }

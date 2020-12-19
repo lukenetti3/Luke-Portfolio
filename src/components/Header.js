@@ -7,21 +7,22 @@ if (typeof window !== "undefined") {
 }
 
 const Header = () => (
-  <div className="flex justify-between py-6">
+  <div className="flex flex-wrap justify-between py-6">
     <Link to="/">
       <p className="font-header font-bold text-xl">Luke Netti.</p>
     </Link>
-    <div className="flex align-middle">
-      <Link to="">
-        <li className="list-none px-5 text-lg m-0">
-          <Link to="/#my-work">my work</Link>
-        </li>
-      </Link>
-      <Link to="">
-        <li className="list-none px-5 text-lg m-0">
-          <Link to="/#get-in-touch">get in touch</Link>
-        </li>
-      </Link>
+    <div className="flex flex-wrap align-middle">
+      <li className="list-none px-5 text-lg m-0">
+        <Link to="/#my-work">my work</Link>
+      </li>
+
+      <li className="list-none px-5 text-lg m-0">
+        <Link to="/#get-in-touch">get in touch</Link>
+      </li>
+
+      <li className="list-none px-5 text-lg m-0">
+        <a href="https://blog.lukenetti.com">blog</a>
+      </li>
     </div>
   </div>
 )

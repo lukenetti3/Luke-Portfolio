@@ -12,6 +12,7 @@ const IndexPage = () => (
     <Helmet>
           <meta charSet="utf-8" />
           <title>Luke Netti</title>
+          <meta name="description" content="Luke Netti portfolio website. See my projects and how I can help your company"/>
           <link rel="canonical" href="https://lukenetti.com" />
           <link rel="icon" href={favicon} />
         </Helmet>
