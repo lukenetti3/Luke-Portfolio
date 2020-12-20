@@ -29,16 +29,16 @@ const Projects = () => (
           <h2 className="font-header text-6xl font-semibold py-5">Projects</h2>
         </div>
         <div className="flex justify-center">
-          <span className="mx-5 px-1 rounded-sm bg-blue-300 text-white">
+          <span className="mx-5 mt-2 px-1 rounded-sm bg-blue-300 text-white">
             HTML
           </span>
-          <span className="mx-5 px-1 rounded-sm bg-blue-400 text-white">
+          <span className="mx-5 mt-2 px-1 rounded-sm bg-blue-400 text-white">
             CSS
           </span>
-          <span className="mx-5 px-1 rounded-sm bg-blue-500 text-white">
+          <span className="mx-5 mt-2 px-1 rounded-sm bg-blue-500 text-white">
             JavaScript
           </span>
-          <span className="mx-5 px-1 rounded-sm bg-blue-500 text-white">
+          <span className="mx-5 mt-2 px-1 rounded-sm bg-blue-500 text-white">
             React
           </span>
         </div>
@@ -59,15 +59,15 @@ const Projects = () => (
           <h1 className="font-header text-6xl font-semibold text-center pb-5">
             Websites
           </h1>
-          <div className="flex justify-center">
-            <span className="mx-5 px-1 rounded-sm bg-green-300 text-white">
+          <div className="flex flex-wrap justify-center">
+            <span className="mx-5 mt-2 px-1 rounded-sm bg-green-300 text-white">
               WordPress
             </span>
-            <span className="mx-5 px-1 rounded-sm bg-green-400 text-white">
+            <span className="mx-5 mt-2 px-1 rounded-sm bg-green-400 text-white">
               GatsbyJS
             </span>
-            <span className="mx-5 px-1 rounded-sm bg-green-500 text-white">
-              Custom Design
+            <span className="mx-5 mt-2 px-1 rounded-sm bg-green-500 text-white">
+              Design
             </span>
           </div>
           <div className="flex justify-center flex-wrap mt-24">
@@ -90,16 +90,16 @@ const Projects = () => (
                 Website
               </a>
             </div>
-            <div className="max-w-2xl pt-10 md:pt-0">
+            <div className="max-w-2xl pt-10 lg:pt-0">
               <img src={photographyImg} alt="computer screen mockup" />
             </div>
           </div>
 
-          <div className="flex flex-wrap-reverse mt-24">
-            <div className="max-w-xl md:pt-0 pt-10">
+          <div className="flex justify-center flex-wrap-reverse mt-24">
+            <div className="max-w-2xl lg:pt-0 pt-10">
               <img src={videographyImg} alt="computer screen mockup" />
             </div>
-            <div className="max-w-2xl md:pl-20 pl-0">
+            <div className="max-w-2xl lg:pl-20 pl-0">
               <p className="font-bold text-4xl mb-7 font-header">Videography Website</p>
               <p className="mb-10 font-body text-lg">
                 This is the website design and development of a videographer

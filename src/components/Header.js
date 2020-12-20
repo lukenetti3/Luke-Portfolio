@@ -7,7 +7,7 @@ if (typeof window !== "undefined") {
 }
 
 const Header = () => (
-  <div className="flex flex-wrap justify-between py-6">
+  <div className="flex flex-wrap md:justify-between justify-center py-6">
     <Link to="/">
       <p className="font-header font-bold text-xl">Luke Netti.</p>
     </Link>

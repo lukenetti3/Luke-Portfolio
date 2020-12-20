@@ -21,11 +21,11 @@ const Footer = () => (
     render={data => (
       <div>
         <section
-          className="bg-gray-800 text-white flex flex-wrap justify-between mt-16 py-32 px-20 transform rotate-1 rounded-3xl shadow-md"
+          className="bg-gray-800 text-white flex flex-wrap justify-between mt-16 md:py-32 py-10 md:px-20 px-10 transform rotate-1 rounded-3xl shadow-md"
           id="get-in-touch"
         >
           <div className="max-w-xl transform -rotate-1">
-            <h1 className="text-6xl font-header font-bold">Want to Work?</h1>
+            <h1 className="md:text-6xl text-4xl font-header font-bold lg:pb-0 pb-4">Want to Work?</h1>
           </div>
           <div className="font-body text-xl leading-8 max-w-xl transform -rotate-1">
             <Flip top cascade>

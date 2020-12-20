@@ -1,7 +1,7 @@
 import React from "react"
 
 const ProjectCard = props => (
-  <div className="max-w-lg m-10 rounded-xl shadow-md">
+  <div className="md:max-w-lg md:m-10 mt-10 rounded-xl shadow-md">
     <div clasName="">
       <img src={props.img} alt={props.title} className="rounded-t-xl" />
       <div className="px-10 py-3">

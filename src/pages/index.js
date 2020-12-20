@@ -11,12 +11,12 @@ const IndexPage = () => (
   <div>
     <Helmet>
           <meta charSet="utf-8" />
-          <title>Luke Netti</title>
+          <title  lang="en">Luke Netti</title>
           <meta name="description" content="Luke Netti portfolio website. See my projects and how I can help your company"/>
           <link rel="canonical" href="https://lukenetti.com" />
           <link rel="icon" href={favicon} />
         </Helmet>
-    <div className="w-10/12 mx-auto">
+    <div className="lg:max-w-screen-xl w-10/12 mx-auto">
       <Header />
       <Hero />
       <Projects />

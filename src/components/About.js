@@ -23,16 +23,16 @@ const About = () => (
     `}
     render={data => (
       <div>
-        <section className="from-green-400 to-blue-300 bg-gradient-to-r flex flex-wrap justify-between text-white py-24 px-20 mt-10 rounded-3xl shadow-md transform -rotate-1">
+        <section className="from-green-400 to-blue-300 bg-gradient-to-r flex flex-wrap justify-between text-white mb-2 md:py-36 py-10 md:px-20 px-10 mt-5 rounded-3xl shadow-md transform -rotate-1">
           <div className="max-w-xl transform rotate-1">
             <Fade>
-              <h1 className="text-6xl font-header font-bold">
+              <h1 className="md:text-6xl text-5xl font-header font-bold pb-5 lg:pb-0">
                 What I Do
               </h1>
             </Fade>
           </div>
           <div className="max-w-xl transform rotate-1">
-            <div className="font-body text-xl leading-8" dangerouslySetInnerHTML={{__html: data.gcms.aboutMes[0].developmentParagraph.html}}>  
+            <div className="font-body md:text-xl text-lg md:leading-8 " dangerouslySetInnerHTML={{__html: data.gcms.aboutMes[0].developmentParagraph.html}}>  
             </div>
           </div>
         </section>
@@ -44,8 +44,8 @@ const About = () => (
             </div>
             <div className="max-w-xl">
               <Zoom>
-                <h1 className="text-6xl font-header font-bold mb-8">About Me</h1>
-                <div className="font-body text-xl leading-8" dangerouslySetInnerHTML={{__html: data.gcms.aboutMes[0].aboutMeParagraph.html}}>  
+                <h1 className="md:text-6xl text-5xl font-header font-bold mb-8">About Me</h1>
+                <div className="font-body md:text-xl text-lg md:leading-8" dangerouslySetInnerHTML={{__html: data.gcms.aboutMes[0].aboutMeParagraph.html}}>  
                 </div>
               </Zoom>
             </div>
