@@ -21,7 +21,13 @@ const Header = () => (
       </li>
 
       <li className="list-none px-5 text-lg m-0">
-        <a href="https://blog.lukenetti.com">blog</a>
+        <a
+          href="https://blog.lukenetti.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          blog
+        </a>
       </li>
     </div>
   </div>

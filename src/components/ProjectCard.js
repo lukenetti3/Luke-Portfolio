@@ -3,7 +3,7 @@ import React from "react"
 const ProjectCard = props => (
   <div className="md:max-w-lg md:m-10 mt-10 rounded-xl shadow-md">
     <div clasName="">
-      <img src={props.img} alt={props.title} className="rounded-t-xl" />
+      <img src={props.img} alt={props.title} className="rounded-t-xl w-full h-72" />
       <div className="px-10 py-3">
         <p className="text-2xl font-bold font-header pb-2">{props.title}</p>
         <p className="font-body pb-2 text-lg">{props.description}</p>

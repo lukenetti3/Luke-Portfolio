@@ -42,7 +42,7 @@ const Projects = () => (
             React
           </span>
         </div>
-
+        {console.log(data)}
         <div className="flex flex-wrap justify-center">
           {data.gcms.projectCards.map(item => (
             <ProjectCard
