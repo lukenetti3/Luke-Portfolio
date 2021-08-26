@@ -1,8 +1,8 @@
 import React from "react"
 import ProjectCard from "../components/ProjectCard"
 import { StaticQuery, graphql } from "gatsby"
-import photographyImg from "../images/PhotographyMockup.png"
-import videographyImg from "../images/BryanCav.png"
+import photographyImg from "../images/photographyMockup.png"
+import apexImg from "../images/apexMockup.png"
 
 const Projects = () => (
   <StaticQuery
@@ -63,9 +63,6 @@ const Projects = () => (
             <span className="mx-5 mt-2 px-1 rounded-sm bg-green-300 text-white">
               WordPress
             </span>
-            <span className="mx-5 mt-2 px-1 rounded-sm bg-green-400 text-white">
-              GatsbyJS
-            </span>
             <span className="mx-5 mt-2 px-1 rounded-sm bg-green-500 text-white">
               Design
             </span>
@@ -73,21 +70,22 @@ const Projects = () => (
           <div className="flex justify-center flex-wrap mt-24">
             <div className="">
               <p className="font-bold text-4xl mb-7 font-header">
-                Photographer Website
+                Emily Netti Photography
               </p>
               <p className="max-w-2xl mb-10 font-body text-lg">
-                A website for a photographer using GatsbyJS and Prismic.io as a
-                CMS. The styling was done using Flexbox and CSS Grid. The design
-                was done with the intent to keep the website clean, simple, and
-                imagery focused.
+                The client wanted an updated website design for her photography
+                business. She does wedding photography as well as lifestyle
+                sessions. Her need for a website was so she can showcase her
+                work and have an easy way for potential clients to get in touch
+                with her.
               </p>
               <a
                 className="transition duration-500 transform hover:scale-110 from-green-500 to-green-400 bg-gradient-to-r px-7 py-3 rounded-3xl shadow-sm text-white"
-                href="https://emilynettiphotography.netlify.app/"
+                href="https://emilynettiphotography.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Website
+                website
               </a>
             </div>
             <div className="max-w-2xl pt-10 lg:pt-0">
@@ -97,23 +95,25 @@ const Projects = () => (
 
           <div className="flex justify-center flex-wrap-reverse mt-24">
             <div className="max-w-2xl lg:pt-0 pt-10">
-              <img src={videographyImg} alt="computer screen mockup" />
+              <img src={apexImg} alt="computer screen mockup" />
             </div>
             <div className="max-w-2xl lg:pl-20 pl-0">
-              <p className="font-bold text-4xl mb-7 font-header">Videography Website</p>
+              <p className="font-bold text-4xl mb-7 font-header">
+                Apex Spray Foam
+              </p>
               <p className="mb-10 font-body text-lg">
-                This is the website design and development of a videographer
-                portfolio website. This was built using WordPress and a page
-                builder. The design goal was to display his work but also show
-                imagery and his personality reflected through the website.
+                A construction company that needed a website to represent who
+                they were and what they stood for. This website helped them show
+                their work to future clients. It also allowed them to update
+                their content in an easy and efficient way.
               </p>
               <a
                 className="transition duration-500 transform hover:scale-110 from-green-500 to-green-400 bg-gradient-to-r px-7 py-3 rounded-3xl shadow-sm text-white"
-                href="https://bryancavellier.com"
+                href="https://apexsprayfoam.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Website
+                website
               </a>
             </div>
           </div>
