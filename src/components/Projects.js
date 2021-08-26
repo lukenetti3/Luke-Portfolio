@@ -1,7 +1,7 @@
 import React from "react"
 import ProjectCard from "../components/ProjectCard"
 import { StaticQuery, graphql } from "gatsby"
-import photographyImg from "../images/photographyMockup.png"
+import photographyImg from "../images/PhotographyMockup.png"
 import apexImg from "../images/apexMockup.png"
 
 const Projects = () => (
